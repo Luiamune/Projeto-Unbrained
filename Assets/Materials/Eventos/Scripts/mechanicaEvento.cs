@@ -2,30 +2,43 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
+using System.IO;
 
 public class mechanicaEvento : MonoBehaviour
 {
     // Start is called before the first frame update
     private Image card;
-    public GameObject Objeto;
+    public FileInfo theSourceFile;
+    protected StreamReader reader = null;
+    public int sanidade;
+    public string path;
+    public string texti;
+    public TextAsset filing;
+    public GameObject [] Objeto;
+    public string [] historia;
+    public int temp = 0;
     void Start()
     {
-       card = gameObject.GetComponent<Image>();
-        desliga();
+        path = @"\Assets\Scripts\test.txt";
+        if (!File.Exists(path))
+            Debug.Log("existe");
+        theSourceFile = new FileInfo(@"C:\Users\gamejam\Documents\Projeto-Unbrained\Assets\Scripts\test.txt");
+        reader = theSourceFile.OpenText();
+        while (texti != null)
+        {
+            texti = reader.ReadLine();
+            historia[temp] = texti;
+            Debug.Log(texti);
+            temp += 1;
+        }
+        
     }
-    public void evento_flip()
+    public void eventos ()
     {
 
     }
-    void liga()
-    {
-        Objeto.SetActive(true);
-        card.enabled = false;
-    }
-    void desliga()
-    {
-        Objeto.SetActive(false);
-    }
+    
     // Update is called once per frame
     void Update()
     {

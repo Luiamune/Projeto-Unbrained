@@ -408,6 +408,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   carta: {fileID: 1488384736}
   verso: {fileID: 0}
+  played: 0
 --- !u!95 &732865031
 Animator:
   serializedVersion: 3
@@ -575,6 +576,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   carta: {fileID: 1488384736}
   verso: {fileID: 0}
+  played: 0
 --- !u!95 &760104085
 Animator:
   serializedVersion: 3
@@ -777,12 +779,27 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 797821318}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c283f1ea368bb664e862952d0e5f1b66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Objeto: {fileID: 0}
+  sanidade: 0
+  path: 
+  texti: 
+  filing: {fileID: 4900000, guid: b908f0e6d22730e4c8d2f77639d3522b, type: 3}
+  Objeto:
+  - {fileID: 760104082}
+  - {fileID: 732865028}
+  - {fileID: 1530893773}
+  historia:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  temp: 0
 --- !u!4 &797821320
 Transform:
   m_ObjectHideFlags: 0
@@ -1228,6 +1245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Flip: {fileID: 0}
   temp: {x: 0, y: 0}
+  liberageral2: 0
   liberageral: 0
   libera: 0
   tempo: 0
@@ -1286,6 +1304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   carta: {fileID: 1488384736}
   verso: {fileID: 0}
+  played: 0
 --- !u!95 &1530893776
 Animator:
   serializedVersion: 3
