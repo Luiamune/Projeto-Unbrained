@@ -605,10 +605,10 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: 49e8cf51-bfd9-4f3b-bcb3-afa99b2a0e49
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: Projeto Unbrained
+  organizationId: rodrigo-nakamuta
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
