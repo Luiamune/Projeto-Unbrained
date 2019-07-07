@@ -39,6 +39,10 @@ public class navegacao : MonoBehaviour
         {
             SceneManager.LoadScene("Panel");
         }
+        else if (naming == "Panel" && gameObject.name == "Load")
+        {
+            SceneManager.LoadScene("Teste_Mecanica1");
+        }
     }
     // Update is called once per frame
     void Update()

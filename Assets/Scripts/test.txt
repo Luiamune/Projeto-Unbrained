@@ -1,6 +1,6 @@
 sano
 meio-sano
 insano
-sano
-meio-sano
-insano
+sano2
+meio-sano2
+insano2
