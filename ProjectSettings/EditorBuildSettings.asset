@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Logo.unity
+    guid: 71064beff26c545448272df53634f81f
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
@@ -14,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Config.unity
     guid: 7f33c9b5e27825a43a24480989d81de4
+  - enabled: 1
+    path: Assets/Credits.unity
+    guid: bb3dfe3378adce444a68c08bfa8999f9
+  - enabled: 1
+    path: Assets/Teste_Mecanica1.unity
+    guid: 30dab80c24bb70f4282081b10a562086
   m_configObjects: {}

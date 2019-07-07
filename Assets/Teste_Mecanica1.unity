@@ -403,7 +403,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 732865028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ecb10683236c9c4a84bb48c5013ec92, type: 3}
+  m_Script: {fileID: 11500000, guid: ed50623fe2ae5be4ea378a061d0cd697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   carta: {fileID: 1488384736}
@@ -571,7 +571,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 760104082}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ecb10683236c9c4a84bb48c5013ec92, type: 3}
+  m_Script: {fileID: 11500000, guid: ed50623fe2ae5be4ea378a061d0cd697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   carta: {fileID: 1488384736}
@@ -1116,7 +1116,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000076293945, y: 351}
+  m_AnchoredPosition: {x: 0, y: 351}
   m_SizeDelta: {x: 539, y: 303}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1488384732
@@ -1240,7 +1240,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1488384730}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50eb495603f85b141ad833fa74855dd2, type: 3}
+  m_Script: {fileID: 11500000, guid: 184e7a02ca0d42041859e0beb9d54887, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Flip: {fileID: 0}
@@ -1299,7 +1299,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1530893773}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ecb10683236c9c4a84bb48c5013ec92, type: 3}
+  m_Script: {fileID: 11500000, guid: ed50623fe2ae5be4ea378a061d0cd697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   carta: {fileID: 1488384736}

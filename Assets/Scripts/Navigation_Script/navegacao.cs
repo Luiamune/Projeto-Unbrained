@@ -19,6 +19,26 @@ public class navegacao : MonoBehaviour
         {
             SceneManager.LoadScene("Config");
         }
+       else if (naming == "Panel" && gameObject.name == "playButton")
+        {
+            SceneManager.LoadScene("Teste_Mecanica1");
+        }
+        else if (naming == "Panel" && gameObject.name == "buttonCredit")
+        {
+            SceneManager.LoadScene("Credits");
+        }
+        else if (naming == "Config" && gameObject.name == "Button")
+        {
+            SceneManager.LoadScene("Panel");
+        }
+        else if (naming == "Credits" && gameObject.name == "Voltar")
+        {
+            SceneManager.LoadScene("Panel");
+        }
+        else if (naming == "Logo" && gameObject.name == "Logo")
+        {
+            SceneManager.LoadScene("Panel");
+        }
     }
     // Update is called once per frame
     void Update()

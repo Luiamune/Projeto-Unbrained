@@ -23,7 +23,7 @@ public class mechanicaEvento : MonoBehaviour
         path = @"\Assets\Scripts\test.txt";
         if (!File.Exists(path))
             Debug.Log("existe");
-        theSourceFile = new FileInfo(@"C:\Users\gamejam\Documents\Projeto-Unbrained\Assets\Scripts\test.txt");
+        theSourceFile = new FileInfo(@"C:\Users\gamejam\Documents\Projeto-Unbrained\Assets\Scripts\test.txt");// colocar diretório onde se encontra o arquivo
         reader = theSourceFile.OpenText();
         while (texti != null)
         {
