@@ -6,6 +6,8 @@ public class navegacao : MonoBehaviour
 {
     public Scene current;
     public string naming;
+    public bool yes = false;
+    public bool no = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,11 +17,11 @@ public class navegacao : MonoBehaviour
     public void navegate()
     {
         Debug.Log("nome");
-        if(naming == "Panel" && gameObject.name == "configButton")
+        if (naming == "Panel" && gameObject.name == "configButton")
         {
             SceneManager.LoadScene("Config");
         }
-       else if (naming == "Panel" && gameObject.name == "playButton")
+        else if (naming == "Panel" && gameObject.name == "playButton")
         {
             SceneManager.LoadScene("Teste_Mecanica1");
         }
@@ -43,10 +45,19 @@ public class navegacao : MonoBehaviour
         {
             SceneManager.LoadScene("Teste_Mecanica1");
         }
+        if (gameObject.name == "yes")
+        {
+            yes = true;
+        }
+        else if (gameObject.name == "no")
+        {
+            no = true;
+        }
     }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+        // Update is called once per frame
+        void Update()
+        {
+
+        }
+    
 }
