@@ -14,6 +14,7 @@ public class navegacao : MonoBehaviour
         current = SceneManager.GetActiveScene();
         naming = current.name;
     }
+
     public void navegate()
     {
         Debug.Log("nome");
