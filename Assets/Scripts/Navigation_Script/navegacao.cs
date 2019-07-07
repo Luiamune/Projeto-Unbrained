@@ -7,7 +7,7 @@ public class navegacao : MonoBehaviour
     public Scene current;
     public string naming;
     public bool yes = false;
-    public bool no = false;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -49,10 +49,7 @@ public class navegacao : MonoBehaviour
         {
             yes = true;
         }
-        else if (gameObject.name == "no")
-        {
-            no = true;
-        }
+       
     }
         // Update is called once per frame
         void Update()
