@@ -15,33 +15,38 @@ public class mechanicaEvento : MonoBehaviour
     public string path;
     public string texti;
     public TextAsset filing;
-    public GameObject [] Objeto;
-    public string [] historia;
+    public GameObject[] Objeto;
+    public List<String> historia;
     public int temp = 0;
     void Start()
     {
-        path = @"\Assets\Scripts\test.txt";
-        if (!File.Exists(path))
-            Debug.Log("existe");
-        theSourceFile = new FileInfo(@"C:\Users\User\Documents\Projeto Unbrained\Assets\Scripts\test.txt");// colocar diretório onde se encontra o arquivo
+        Uri path = new Uri(Directory.GetCurrentDirectory() + @"\Assets\Scripts\test.txt");
+        if (path.IsFile)
+        {
+            Debug.Log("existe " + path.ToString());
+        }
+        else
+        {
+            Debug.Log("nao existe " + path.ToString());
+        }
+        theSourceFile = new FileInfo(path.AbsolutePath); // colocar diretório onde se encontra o arquivo
         reader = theSourceFile.OpenText();
         while (texti != null)
         {
             texti = reader.ReadLine();
-            historia[temp] = texti;
+            historia.Add(texti);
             Debug.Log(texti);
             temp += 1;
         }
-        
     }
-    public void eventos ()
+    public void eventos()
     {
 
     }
-    
+
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
