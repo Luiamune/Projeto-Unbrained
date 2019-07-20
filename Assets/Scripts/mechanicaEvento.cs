@@ -29,7 +29,7 @@ public class mechanicaEvento : MonoBehaviour
         {
             Debug.Log("nao existe " + path.ToString());
         }
-        theSourceFile = new FileInfo(path.AbsolutePath); // colocar diretório onde se encontra o arquivo
+        theSourceFile = new FileInfo(path.OriginalString); // colocar diretório onde se encontra o arquivo
         reader = theSourceFile.OpenText();
         while (texti != null)
         {

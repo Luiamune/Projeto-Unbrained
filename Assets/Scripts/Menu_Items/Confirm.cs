@@ -6,8 +6,15 @@ public class Confirm : MonoBehaviour
 {
     public bool exists;
     public GameObject[] yesno; //o objeto ao qual precisa confirmar alguma ação
+
+    public void Start()
+    {
+        unconfirmed();
+    }
+
     public void confirmed()
     {
+        exists = false;
         if (!exists)
         {
             foreach (GameObject g in yesno)
@@ -16,9 +23,9 @@ public class Confirm : MonoBehaviour
             }
         }
     }
-    // Update is called once per frame
-    void Update()
+    public void unconfirmed()
     {
+        exists = true;
         if (exists)
         {
             foreach (GameObject g in yesno)
@@ -26,5 +33,10 @@ public class Confirm : MonoBehaviour
                 g.SetActive(false);
             }
         }
+    }
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 }
