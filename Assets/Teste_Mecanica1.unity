@@ -792,13 +792,7 @@ MonoBehaviour:
   - {fileID: 760104082}
   - {fileID: 732865028}
   - {fileID: 1530893773}
-  historia:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  historia: []
   temp: 0
 --- !u!4 &797821320
 Transform:

@@ -21,6 +21,7 @@ public class mechanicaEvento : MonoBehaviour
     void Start()
     {
         Uri path = new Uri(Directory.GetCurrentDirectory() + @"\Assets\Scripts\test.txt");
+        Debug.Log(Directory.GetCurrentDirectory());
         if (path.IsFile)
         {
             Debug.Log("existe " + path.ToString());
