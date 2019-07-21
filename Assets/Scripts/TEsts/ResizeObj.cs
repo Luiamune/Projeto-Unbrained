@@ -15,6 +15,7 @@ public class ResizeObj : MonoBehaviour
     public float SoriginalHeight; // S para Son, tamnho desta imagem
     public float SoriginalWidth;
     public RectTransform mapIcon;
+    bool once = false;
     private void Awake()
     {
     
@@ -47,12 +48,16 @@ public class ResizeObj : MonoBehaviour
     {
         proporçãoH = SoriginalHeight/Foriginalheight;
         proporçãoW = SoriginalWidth / Foriginalwidth;
-        
+       
     }
 
     // Update is called once per frame
     void Update()
-    {
-        reajuste();
+    {   
+        if (once == false)
+        {
+            reajuste();
+            once = true;
+        }
     }
 }

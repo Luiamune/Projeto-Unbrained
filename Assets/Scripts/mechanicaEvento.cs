@@ -17,6 +17,7 @@ public class mechanicaEvento : MonoBehaviour
     public TextAsset filing;
     public GameObject[] Objeto;
     public List<String> historia;
+    public List<Char> lining;
     public int temp = 0;
     void Start()
     {
@@ -34,11 +35,13 @@ public class mechanicaEvento : MonoBehaviour
         reader = theSourceFile.OpenText();
         while (texti != null)
         {
+            
             texti = reader.ReadLine();
             historia.Add(texti);
             Debug.Log(texti);
             temp += 1;
         }
+        reader.Close();
     }
     public void eventos()
     {
