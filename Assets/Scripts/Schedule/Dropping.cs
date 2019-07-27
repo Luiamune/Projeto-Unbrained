@@ -22,9 +22,4 @@ public class dropping : MonoBehaviour
         Debug.Log("enter");
 
     }
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

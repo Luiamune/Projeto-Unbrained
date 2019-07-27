@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class Drop : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    void OnCollisionStay2D(Collision2D collision)
     {
-        
+        if (collision.gameObject.tag == "drop" && Input.GetMouseButton(0) == false)
+        {
+            collision.gameObject.transform.position = gameObject.transform.position;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        Debug.Log("enter");
+
     }
 }

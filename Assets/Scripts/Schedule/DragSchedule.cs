@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+    
 public class DragSchedule : MonoBehaviour
-{
-    void Update()
+{ 
+    private TouchPhase touchPhase;
+    private Touch touch;
+    private void OnTouch()
     {
         if (Input.touchCount > 0)
         {
