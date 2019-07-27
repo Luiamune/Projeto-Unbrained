@@ -15,31 +15,43 @@ public class Personagem : MonoBehaviour
         
     }
     public void Tomeiofirst(RectTransform destino)
-    {       
-        destination = paths[0].GetComponent<RectTransform>();
-        currentpos = gameObject.GetComponent<RectTransform>().localPosition;
-        StartCoroutine(moving(destino));
+    {
+        if (gameObject.GetComponent<RectTransform>().localPosition == paths[0].GetComponent<RectTransform>().localPosition)
+        {
+            meio = true;
+            Moveto(destino);
+        }
+        else
+        {
+            destination = paths[0].GetComponent<RectTransform>();
+            currentpos = gameObject.GetComponent<RectTransform>().localPosition;
+            StartCoroutine(moving(destino));
+        }
         
     }
     public void Moveto(RectTransform destino)
     {
-        StopCoroutine("moving");
+        //StopCoroutine("moving");
         destination = destino.GetComponent<RectTransform>();
         currentpos = gameObject.GetComponent<RectTransform>().localPosition;
         StartCoroutine(moving(destino));
+        
     }
 
     public IEnumerator moving(RectTransform destiny)
     {
         float step = 0;
-        while (gameObject.GetComponent<RectTransform>().localPosition != destination.localPosition)
+        while (gameObject.GetComponent<RectTransform>().localPosition != destination.localPosition )
         {
             gameObject.GetComponent<RectTransform>().localPosition = Vector3.Lerp(currentpos, destination.localPosition, step += Time.deltaTime);
-            if (gameObject.GetComponent<RectTransform>().localPosition == destination.localPosition)
-            {                     
+            if (gameObject.GetComponent<RectTransform>().localPosition == paths[0].GetComponent<RectTransform>().localPosition)
+            {
+                meio = true;
                 Moveto(destiny);
                 step = 0;
             }
+            else
+                meio = false;
             yield return null;
         }        
     }
