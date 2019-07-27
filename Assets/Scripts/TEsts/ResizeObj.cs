@@ -14,7 +14,7 @@ public class ResizeObj : MonoBehaviour
     public float proporçãoH;
     public float SoriginalHeight; // S para Son, tamnho desta imagem
     public float SoriginalWidth;
-    public RectTransform mapIcon;
+    public Vector2 newssizedelta;
     bool once = false;
     private void Awake()
     {
@@ -39,8 +39,8 @@ public class ResizeObj : MonoBehaviour
     {
         son.sizeDelta = new Vector2(father.rect.width * proporçãoW, father.rect.height * proporçãoH);
         son.localPosition = new Vector2(((father.rect.width) * anchorx) - (father.rect.width / 2), 
-            ((father.rect.height) * anchory) - (father.rect.height / 2));
-
+        ((father.rect.height) * anchory) - (father.rect.height / 2));
+        newssizedelta = son.sizeDelta;
         // Debug.Log(father.rect.width);
 
     }

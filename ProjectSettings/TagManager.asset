@@ -6,6 +6,7 @@ TagManager:
   tags:
   - yes
   - no
+  - Path
   layers:
   - Default
   - TransparentFX

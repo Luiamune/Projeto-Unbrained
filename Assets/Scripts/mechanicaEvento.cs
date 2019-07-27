@@ -12,6 +12,8 @@ public class mechanicaEvento : MonoBehaviour
     public FileInfo theSourceFile;
     protected StreamReader reader = null;
     public int sanidade;
+    public int saude;
+    
     public string path;
     public string texti;
     public TextAsset filing;
@@ -35,19 +37,35 @@ public class mechanicaEvento : MonoBehaviour
         reader = theSourceFile.OpenText();
         while (texti != null)
         {
-            
+
             texti = reader.ReadLine();
             historia.Add(texti);
-            Debug.Log(texti);
+            //Debug.Log(texti);
             temp += 1;
         }
         reader.Close();
     }
-    public void eventos()
+    // sanidade é tipo 0
+    public int eventos(int parameters, int tipo)
     {
-
+        switch (tipo)
+        {
+            default:
+                return 0;
+            case 0:
+                sanidade += parameters;
+                return sanidade;               
+            case 1:
+                return 0;
+            case 2:
+                return 0;
+            case 3:
+                return 0;
+            case 4:
+                return 0;
+        }
     }
-
+    
     // Update is called once per frame
     void Update()
     {
