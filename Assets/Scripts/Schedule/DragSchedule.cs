@@ -6,21 +6,35 @@ using UnityEngine;
     
 public class DragSchedule : MonoBehaviour
 { 
-    private TouchPhase touchPhase;
-    private Touch touch;
-    private void OnTouch()
-    {
-        if (Input.touchCount > 0)
-        {
-            Touch touch = Input.GetTouch(0); // get first touch since touch count is greater than zero
+    Vector3 touchPosWorld;
+    TouchPhase touchPhase = TouchPhase.Ended;
 
-            if (touch.phase == TouchPhase.Stationary || touch.phase == TouchPhase.Moved)
+    void Update()
+    {
+        //We check if we have more than one touch happening.
+        //We also check if the first touches phase is Ended (that the finger was lifted)
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == touchPhase)
+        {
+            //We transform the touch position into word space from screen space and store it.
+            touchPosWorld = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
+
+            Vector2 touchPosWorld2D = new Vector2(touchPosWorld.x, touchPosWorld.y);
+
+            //We now raycast with this information. If we have hit something we can process it.
+            RaycastHit2D hitInformation = Physics2D.Raycast(touchPosWorld2D, Camera.main.transform.forward);
+
+            if (hitInformation.collider != null)
             {
-                // get the touch position from the screen touch to world point
-                Vector3 touchedPos = Camera.main.ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, 10));
-                // lerp and set the position of the current object to that of the touch, but smoothly over time.
-                transform.position = Vector3.Lerp(transform.position, touchedPos, Time.deltaTime);
+                //We should have hit something with a 2D Physics collider!
+                GameObject touchedObject = hitInformation.transform.gameObject;
+                //touchedObject should be the object someone touched.
+                touchedObject.transform.position = Vector3.Lerp(transform.position, touchPosWorld, Time.deltaTime);
             }
         }
+    }
+
+    void ReceiveScheduleBox()
+    {
+        
     }
 }
